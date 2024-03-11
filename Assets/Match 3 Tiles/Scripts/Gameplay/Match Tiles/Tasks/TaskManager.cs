@@ -7,6 +7,7 @@ using Match3Tiles.Scripts.GameData.LevelData;
 using Newtonsoft.Json;
 using Match3Tiles.Scripts.GUI.Screen;
 using Match3Tiles.Scripts.Gameplay.Configs;
+using Cysharp.Threading.Tasks;
 
 namespace Match3Tiles.Scripts.Gameplay.MatchTiles.Tasks
 {
@@ -53,7 +54,7 @@ namespace Match3Tiles.Scripts.Gameplay.MatchTiles.Tasks
             {
                 string levelDataJson = levelData.text;
                 LevelModel levelModel = JsonConvert.DeserializeObject<LevelModel>(levelDataJson);
-                _tileManager.GererateTilesToGameplay(levelModel.BlockTileDatas);
+                _tileManager.GererateTilesToGameplay(levelModel.BlockTileDatas).Forget();
             }
 
             Debug.Log($"Level_{LevelRecorder.Level}");

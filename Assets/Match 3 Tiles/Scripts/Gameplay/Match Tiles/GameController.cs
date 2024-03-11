@@ -16,7 +16,7 @@ namespace Match3Tiles.Scripts.Gameplay.MatchTiles.Tasks
         [SerializeField] private MatchOrder matchOrder;
         [SerializeField] private MatchTileBlock tileBlockPrefab;
         [SerializeField] private TileSpriteDatabase spriteDatabase;
-        [SerializeField] private Transform tileContainer;
+        //[SerializeField] private Transform tileContainer;
         [SerializeField] private EndGameScreenPanel endGameScreen;
 
         private TileMatchRule _matchRule;
@@ -40,8 +40,8 @@ namespace Match3Tiles.Scripts.Gameplay.MatchTiles.Tasks
         {
             _matchRule = new();
             _matchAppender = new(matchOrder, _matchRule);
-            _matchTileFactory = new(tileBlockPrefab, tileContainer);
-            _tileGenerator = new(_matchTileFactory, _matchRule, spriteDatabase);
+            _matchTileFactory = new(tileBlockPrefab, matchOrder);
+            _tileGenerator = new(_matchTileFactory, _matchRule, spriteDatabase, gameInput);
             _gameStateControl = new(_tileGenerator, endGameScreen);
             _taskManager = new(_matchAppender, _tileGenerator, gameInput, endGameScreen, _gameStateControl);
         }

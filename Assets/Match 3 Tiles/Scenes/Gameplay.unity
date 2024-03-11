@@ -1686,7 +1686,6 @@ MonoBehaviour:
   matchOrder: {fileID: 2929019484115509829}
   tileBlockPrefab: {fileID: 2443040747943027518, guid: bcf2567cea7976145b226a541cfba8e7, type: 3}
   spriteDatabase: {fileID: 11400000, guid: d85cbcbcb1ef80d40b0b8214bd1c5dba, type: 2}
-  tileContainer: {fileID: 776277092}
   endGameScreen: {fileID: 732997553}
 --- !u!4 &1083932072
 Transform:

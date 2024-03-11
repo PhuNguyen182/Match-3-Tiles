@@ -75,6 +75,11 @@ namespace Match3Tiles.Scripts.Gameplay.MatchTiles.Entities
             return tileAnimation.MoveTo(position);
         }
 
+        public UniTask ReturnToOriginalPosition()
+        {
+            return MoveTo(_tileData.Position);
+        }
+
         public void CheckOverlap()
         {
             _overlappedCount = Physics2D.OverlapBox(transform.position, tileCollider.size, 0, _contactFilter, _tileColliders);

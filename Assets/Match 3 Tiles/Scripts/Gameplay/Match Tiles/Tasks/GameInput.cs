@@ -23,7 +23,7 @@ namespace Match3Tiles.Scripts.Gameplay.MatchTiles
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !IsLocked)
             {
                 Vector3 position = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
                 ProcessInput(position);

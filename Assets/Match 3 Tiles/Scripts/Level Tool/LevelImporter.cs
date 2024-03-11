@@ -22,8 +22,8 @@ namespace Match3Tiles.Scripts.LevelTool
             _tileBlock = tileBlock;
             _spriteDatabase = spriteDatabase;
             _tileContainer = tileContainer;
-            _tileFactory = new(_tileBlock, _tileContainer);
-            _tileGenerator = new(_tileFactory, null, _spriteDatabase);
+            _tileFactory = new(_tileBlock, null);
+            _tileGenerator = new(_tileFactory, null, _spriteDatabase, null);
         }
 
         public LevelImporter ImportLevel(LevelModel levelModel)
