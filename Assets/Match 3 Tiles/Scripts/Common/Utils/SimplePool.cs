@@ -8,7 +8,7 @@ public static class SimplePool
     // expect most of your pool sizes to be.
     // Note, you can also use Preload() to setSpawnPoints the initial size
     // of a pool -- this can be handy if only some of your pools
-    // are going to be exceptionally large (for example, your bullets.)
+    // are going to be exceptionally large (for taker, your bullets.)
     private const int DEFAULT_POOL_SIZE = 3;
 
     /// <summary>
