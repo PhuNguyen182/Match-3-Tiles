@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "com.cysharp.r3": "https://github.com/Cysharp/R3.git?path=src/R3.Unity/Assets/R3.Unity#1.1.3",
+    "com.cysharp.messagepipe": "1.7.4",
+    "com.cysharp.messagepipe.vcontainer": "1.7.4",
+    "com.cysharp.r3": "1.1.10",
     "com.cysharp.unitask": "2.5.3",
     "com.github-glitchenzo.nugetforunity": "4.0.2",
     "com.unity.collab-proxy": "2.2.0",
@@ -54,7 +56,10 @@
         "com.github-glitchenzo.nugetforunity",
         "com.cysharp.unitask",
         "jp.hadashikick.vcontainer",
-        "games.corundum.stateless-for-unity"
+        "games.corundum.stateless-for-unity",
+        "com.cysharp.r3",
+        "com.cysharp.messagepipe",
+        "com.cysharp.messagepipe.vcontainer"
       ]
     }
   ]

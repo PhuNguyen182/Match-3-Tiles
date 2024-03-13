@@ -34,6 +34,9 @@ MonoBehaviour:
     - com.cysharp.unitask
     - jp.hadashikick.vcontainer
     - games.corundum.stateless-for-unity
+    - com.cysharp.r3
+    - com.cysharp.messagepipe
+    - com.cysharp.messagepipe.vcontainer
     m_IsDefault: 0
     m_Capabilities: 0
     m_ConfigSource: 4

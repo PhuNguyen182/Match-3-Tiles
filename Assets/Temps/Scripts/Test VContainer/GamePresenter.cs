@@ -1,4 +1,6 @@
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Rendering.VirtualTexturing;
 using VContainer;
 using VContainer.Unity;
 
@@ -15,11 +17,17 @@ namespace Temps.Scripts.TestVContainer
         {
             
         }
+
+        [Inject]
+        public void SetValue(int num)
+        {
+            Debug.Log(num);
+        }
     }
 
     public class GamePresenter : IStartable
     {
-        private string _s, _s2;
+        public string _s, _s2;
         private readonly HelloScreen _helloScreen;
         private readonly HelloWorldService _service;
         private readonly GoodbyeWorld _goodbye;
@@ -37,8 +45,10 @@ namespace Temps.Scripts.TestVContainer
             {
                 _service.Hello();
                 _goodbye.Goodbye();
+                Debug.Log(_s);
             });
         }
+
 
         [Inject]
         public void SetString(string s)

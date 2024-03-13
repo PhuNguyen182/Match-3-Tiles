@@ -221,6 +221,7 @@ MonoBehaviour:
     TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
+  prefab: {fileID: 2443040747943027518, guid: bcf2567cea7976145b226a541cfba8e7, type: 3}
   helloScreen: {fileID: 301005278}
 --- !u!1 &513646201
 GameObject:
