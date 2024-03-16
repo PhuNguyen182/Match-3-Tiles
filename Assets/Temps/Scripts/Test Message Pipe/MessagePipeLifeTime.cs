@@ -10,7 +10,7 @@ namespace TestMessagePipe
 {
     public class MessagePipeLifeTime : LifetimeScope
     {
-        [SerializeField] private MessageBrokerTaker taker;
+        [SerializeField] private MessageManager messageManager;
 
         protected override void Configure(IContainerBuilder builder)
         {
@@ -19,24 +19,8 @@ namespace TestMessagePipe
                 GlobalMessagePipe.SetProvider(container.AsServiceProvider());
             });
 
-            taker.SetBuilder(builder);
-        }
-    }
-
-    public class MessageBrokerDemo : IStartable
-    {
-        public IPublisher<TestMessage> Publisher { get; }
-        public ISubscriber<TestMessage> Subscriber { get; }
-
-        public MessageBrokerDemo(IPublisher<TestMessage> publisher, ISubscriber<TestMessage> subscriber)
-        {
-            Publisher = publisher;
-            Subscriber = subscriber;
-        }
-
-        public void Start()
-        {
-
+            var options = builder.RegisterMessagePipe();
+            messageManager.SetContainer(builder, options);
         }
     }
 }

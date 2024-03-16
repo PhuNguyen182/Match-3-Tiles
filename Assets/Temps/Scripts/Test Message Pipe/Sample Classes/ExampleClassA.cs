@@ -16,11 +16,13 @@ namespace TestMessagePipe
     {
         private readonly string _testValue;
         private readonly IPublisher<TestMessage> _publisher;
+        private readonly IPublisher<TestMessage2> _publisher2;
 
-        public ExampleClassA(IPublisher<TestMessage> publisher)
+        public ExampleClassA()
         {
             _testValue = "Class A";
-            _publisher = publisher;
+            _publisher = GlobalMessagePipe.GetPublisher<TestMessage>();
+            _publisher2 = GlobalMessagePipe.GetPublisher<TestMessage2>();
         }
 
         public void PublishMessage()
@@ -29,6 +31,11 @@ namespace TestMessagePipe
             {
                 Message = "This is first message",
                 Number = 1000
+            });
+
+            _publisher2.Publish(new TestMessage2
+            {
+                Message = "This is second message"
             });
         }
 

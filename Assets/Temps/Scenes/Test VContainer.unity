@@ -182,7 +182,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 391963497}
-  - component: {fileID: 391963498}
   m_Layer: 0
   m_Name: Game Time Scope
   m_TagString: Untagged
@@ -205,23 +204,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &391963498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391963496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 507480446f32d6441a0ceab69ab724f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentReference:
-    TypeName: 
-  autoRun: 1
-  autoInjectGameObjects: []
-  taker: {fileID: 2115397013}
 --- !u!1 &513646201
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,26 +730,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2115397014}
-  - component: {fileID: 2115397013}
+  - component: {fileID: 2115397015}
   m_Layer: 0
-  m_Name: Message Broker Taker
+  m_Name: Message Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2115397013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115397012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d5169c7faf7ed47a1c4067d973fa88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2115397014
 Transform:
   m_ObjectHideFlags: 0
@@ -783,12 +753,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2115397015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115397012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238a4dca19484754a9f3f72ce8f16531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 667081972}
   - {fileID: 391963497}
+  - {fileID: 2115397014}
   - {fileID: 513646205}
   - {fileID: 1020880091}
-  - {fileID: 2115397014}
