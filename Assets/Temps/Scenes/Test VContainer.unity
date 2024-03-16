@@ -731,6 +731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2115397014}
   - component: {fileID: 2115397015}
+  - component: {fileID: 2115397016}
   m_Layer: 0
   m_Name: Message Manager
   m_TagString: Untagged
@@ -760,11 +761,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115397012}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 238a4dca19484754a9f3f72ce8f16531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2115397016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115397012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8bd48f58062e9469bb6faaf258c67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 1702059901}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
