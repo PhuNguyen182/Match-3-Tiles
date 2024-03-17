@@ -24,8 +24,9 @@ namespace TestHexagonGrid
                 for (int j = 0; j < gridSize.y; j++)
                 {
                     Vector3Int pos = new Vector3Int(i + offset.x, j + offset.y);
-                    Vector3 hexPos = CoordinateConverter.FromCubeToHexagon(pos, size, hexagonType);
-                    Instantiate(gridCell, hexPos, Quaternion.identity);
+                    Vector3 hexPos = CoordinateConverter.FromCartesianToHexagon(pos, size, hexagonType);
+                    Vector3 cubePos = CoordinateConverter.FromHexagonToCartesian(hexPos, size, hexagonType);
+                    Debug.Log($"Original: {pos}, Hex: {hexPos}, Cube: {cubePos}");
                 }
             }
         }
