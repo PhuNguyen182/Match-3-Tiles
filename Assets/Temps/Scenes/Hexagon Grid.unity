@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 0.55
   hexagonType: 0
-  gridCell: {fileID: 7768532636728747471, guid: a17671b21569bdf4097953c13f12ca81, type: 3}
+  gridCell: {fileID: 4836825968426307790, guid: 80998c532c8c8904ea85403f743a89e3, type: 3}
   gridSize: {x: 8, y: 4}
   offset: {x: -4, y: -2}
 --- !u!4 &723673935
